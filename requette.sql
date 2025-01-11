@@ -1,0 +1,63 @@
+CREATE TABLE Roles (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    role VARCHAR(55) NOT NULL
+);
+
+CREATE TABLE Users (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(55) NOT NULL,
+    firstname VARCHAR(55) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    password VARCHAR(255) NOT NULL,
+    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    isVerified BOOLEAN DEFAULT FALSE,
+    token VARCHAR(255) DEFAULT NULL,
+    idRole INT NOT NULL,
+    FOREIGN KEY (idRole) REFERENCES Roles(id)
+);
+
+CREATE TABLE Races(
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    name VARCHAR(55) NOT NULL
+);
+
+CREATE TABLE Sexe(
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    man BOOLEAN,
+    woman BOOLEAN
+);
+
+CREATE TABLE Compagny(
+    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
+    children BOOLEAN,
+    cat BOOLEAN,
+    dog BOOLEAN
+);
+
+CREATE TABLE Animals(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    name VARCHAR(55) NOT NULL,
+    age INT NOT NULL,
+    img VARCHAR(255) NOT NULL,
+    vaccinated BOOLEAN DEFAULT FALSE,
+    neutered BOOLEAN DEFAULT FALSE,
+    dewormed BOOLEAN DEFAULT FALSE,
+    description TEXT,
+    created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    isAdopted BOOLEAN DEFAULT FALSE,
+    idRace INT NOT NULL,
+    FOREIGN KEY (idRace) REFERENCES Races(id),
+    idSexe INT NOT NULL,
+    FOREIGN KEY (idSexe) REFERENCES Sexe(id),
+    idCompagny INT NOT NULL,
+    FOREIGN KEY (idCompagny) REFERENCES Compagny(id)
+    );
+    
+CREATE TABLE Adoption(
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    idAnimal INT NOT NULL,
+    idUser INT NOT NULL,
+    createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,
+    FOREIGN KEY (idAnimal) REFERENCES Animals(id),
+    FOREIGN KEY (idUser) REFERENCES Users(id)
+);
