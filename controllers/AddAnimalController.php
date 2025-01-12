@@ -6,6 +6,11 @@ use App\services\AddAnimalService;
 
 class AddAnimalController extends Controller
 {
+    public function index()
+    {
+        $this->render('addAnimals/index');
+    }
+
     public function addAnimal()
     {
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
@@ -15,6 +20,7 @@ class AddAnimalController extends Controller
         }else {
             json_encode(["status" => "error", "message" => "Method not allowed"]);
         }
-        $this->render('addAnimals/index');
+
+        $this->render('addAnimals/addAnimal');
     }
 }

@@ -1,4 +1,23 @@
-ul {
-    text-align: center;
-    list-style-position: inside; /* Les points restent alignés avec le texte */
+.emoji {
+    font-size: 2em;
+}
+
+.animal-care {
+    margin-left: 10vw;
+}
+
+@media screen and (max-width: 1200px) {
+    .container {
+        padding-left: 120px;
+        padding-right: 120px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .svg {
+        display: none;
+    }
+    .container {
+        padding: 0px;
+    }
 }

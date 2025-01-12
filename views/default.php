@@ -46,13 +46,13 @@
                         </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">La pension</a>
+                        <a class="nav-link" href="/pension">La pension</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Bénévolat</a>
+                        <a class="nav-link" href="/benevolat">Bénévolat</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#">Soutenez-nous !</a>
+                        <a class="nav-link" href="/soutenire">Soutenez-nous !</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="/contact">Contact</a>
