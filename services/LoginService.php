@@ -21,7 +21,7 @@ class LoginService
         $user = $userRepository->search($email);
 
         // Vérifier si l'utilisateur est confirmé
-        if ($user && $user->is_verified == '0') {
+        if ($user && $user->isVerified == '0') {
             http_response_code(403);
             echo json_encode(["status" => "error", "message" => "Veuillez confirmer votre adresse email avant de vous connecter."]);
             exit();

@@ -2,9 +2,11 @@
 $title = "Adoption";
 $css = "adoption";
 $compte = 1;
+if (isset($_SESSION['role']) && $_SESSION['role'] === 'Admin') {  
+    echo '<a href="/AddAnimal/AddAnimal">Ajouter un animal</a>';
+} 
 ?>
 
-<a href="/AddAnimal/AddAnimal">Ajouter un animal</a>
 
 <?php
 $counter = 1;

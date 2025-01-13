@@ -33,7 +33,7 @@ class RegisterService
             'email' => $data['email'],
             'password' => $password,
             'token' => $token,
-            'id_role' => $data['id_role'] ?? 2,
+            'idRole' => $data['idRole'] ?? 2,
         ];
         // Hydrater et enregistrer l'utilisateur avec le token
         $UsersModel = new UsersModel();

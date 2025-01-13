@@ -6,7 +6,7 @@ $css = 'login';
 <section class="text-center d-flex justify-content-center align-items-center login">
     <div class="container p-4 col-12 col-md-8 col-lg-4 bg-gray">
         <h2>Inscription</h2>
-        <form method="POST" class="p-3" id="loginForm" action="/login/register">
+        <form method="POST" class="p-3" id="loginForm" action="/register/register">
             <div class="form-group">
                 <label for="firstname">prenom:</label>
                 <input type="text" name="firstname" id="firstname" class="form-control mb-3" required>

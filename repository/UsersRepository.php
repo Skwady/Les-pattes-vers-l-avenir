@@ -12,9 +12,9 @@ class UsersRepository extends BaseRepository
     public function search($email)
     {
         return $this->req(
-            "SELECT u.id, u.name, u.password, u.email, u.is_verified, u.id_role, r.role 
+            "SELECT u.id, u.name, u.password, u.email, u.isVerified, u.idRole, r.role 
              FROM ". $this->table ." u
-             JOIN Role r ON u.id_role = r.id 
+             JOIN Roles r ON u.idRole = r.id 
              WHERE u.email = :email",
             ['email' => $email]
         )->fetch();

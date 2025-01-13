@@ -17,8 +17,8 @@ class ConfirmService
         if ($user) {
             
             $data = [
-                'token' => null,
-                'is_verified' => 1
+                'token' => '',
+                'isVerified' => 1
             ];
             
             $userModel = new UsersModel();
