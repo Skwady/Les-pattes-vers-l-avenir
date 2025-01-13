@@ -1,0 +1,106 @@
+.adoption-card {
+    max-width: 70vw;
+    margin: 20px auto;
+}
+
+.adoption-card img {
+    width: 100%;
+    height: auto;
+}
+
+.img {
+    border: 5px solid #BE185D;
+}
+
+.adoption-card .details {
+    background-color: #FBCFE8;
+    border: 5px solid #BE185D;
+    padding: 20px;
+    width: 100%;
+}
+
+.adoption-card .details h3 {
+    color: #e91e63;
+}
+
+.adoption-card .btn-adopt {
+    background-color: #FBCFE8;
+    color: #BE185D;
+    border: solid 3px #BE185D;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: block;
+    margin: 20px 0px 20px 50px;
+    width: 50%;
+}
+
+.adoption-card .btn-adopt:hover {
+    background-color: #d81b60;
+    color: #fff;
+}
+
+.sexe {
+    max-width: 2vw;
+    min-width: 30px;
+}
+
+.icon {
+    max-width: 4vw;
+    min-width: 30px;
+    margin-right: 30px;
+}
+
+.icon-btn {
+    justify-content: space-between;
+}
+
+.img2 {
+    border: 5px solid #172554;
+}
+
+.adoption-card .btn-adopt2 {
+    background-color: #93C5FD;
+    color: #172554;
+    border: solid 3px #172554;
+    text-align: center;
+    font-weight: bold;
+    padding: 10px 20px;
+    border-radius: 5px;
+    display: block;
+    margin: 20px 0px 20px 50px;
+    width: 50%;
+}
+
+.adoption-card .btn-adopt2:hover {
+    background-color: #172554;
+    color: #fff;
+}
+
+.adoption-card .details2 {
+    background-color: #93C5FD;
+    border: 5px solid #172554;
+    padding: 20px;
+    width: 100%;
+}
+
+.adoption-card .details2 h3 {
+    color: #172554;
+}
+
+@media screen and (max-width: 600px) {
+    .icon-btn{
+        justify-content: center;
+        margin-top: 10px;
+    }
+
+    .adoption-card .btn-adopt, .adoption-card .btn-adopt2 {
+        width: 100%;
+        margin: 20px 0px;
+    }
+
+    .adoption-card {
+        max-width: 100vw;
+    }
+}

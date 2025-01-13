@@ -2,7 +2,7 @@
 
 namespace App\Models;
 
-class AnimalsController extends Model
+class AnimalsModel extends Model
 {
     private $id;
     private $name;
@@ -11,12 +11,14 @@ class AnimalsController extends Model
     private $vaccinated;
     private $neutered;
     private $dewormed;
+    private $children;
+    private $cat;
+    private $dog;
     private $description;
     private $createdAt;
     private $isAdopted;
     private $idRace;
     private $idSexe;
-    private $idCompany;
 
     /**
      * Get the value of id
@@ -199,17 +201,47 @@ class AnimalsController extends Model
     }
 
     /**
-     * Get the value of idCompany
+     * Get the value of children
      */
-    public function getIdCompany() {
-        return $this->idCompany;
+    public function getChildren() {
+        return $this->children;
     }
 
     /**
-     * Set the value of idCompany
+     * Set the value of children
      */
-    public function setIdCompany($idCompany): self {
-        $this->idCompany = $idCompany;
+    public function setChildren($children): self {
+        $this->children = $children;
+        return $this;
+    }
+
+    /**
+     * Get the value of cat
+     */
+    public function getCat() {
+        return $this->cat;
+    }
+
+    /**
+     * Set the value of cat
+     */
+    public function setCat($cat): self {
+        $this->cat = $cat;
+        return $this;
+    }
+
+    /**
+     * Get the value of dog
+     */
+    public function getDog() {
+        return $this->dog;
+    }
+
+    /**
+     * Set the value of dog
+     */
+    public function setDog($dog): self {
+        $this->dog = $dog;
         return $this;
     }
 }    

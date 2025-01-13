@@ -41,8 +41,8 @@
                             Adoptez-nous !
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="entreesDropdown">
-                            <li><a class="dropdown-item" href="#">Nos amis les chiens</a></li>
-                            <li><a class="dropdown-item" href="#">Nos amis les chat</a></li>
+                            <li><a class="dropdown-item" href="/addAnimal/viewDog">Nos amis les chiens</a></li>
+                            <li><a class="dropdown-item" href="/addAnimal/viewCat">Nos amis les chat</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">

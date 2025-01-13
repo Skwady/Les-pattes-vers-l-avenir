@@ -23,15 +23,7 @@ CREATE TABLE Races(
 
 CREATE TABLE Sexe(
     id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    man BOOLEAN,
-    woman BOOLEAN
-);
-
-CREATE TABLE Compagny(
-    id INT PRIMARY KEY AUTO_INCREMENT NOT NULL,
-    children BOOLEAN,
-    cat BOOLEAN,
-    dog BOOLEAN
+    type VARCHAR(55) NOT NULL
 );
 
 CREATE TABLE Animals(
@@ -43,14 +35,15 @@ CREATE TABLE Animals(
     neutered BOOLEAN DEFAULT FALSE,
     dewormed BOOLEAN DEFAULT FALSE,
     description TEXT,
+    children BOOLEAN DEFAULT FALSE,
+    cat BOOLEAN DEFAULT FALSE,
+    dog BOOLEAN DEFAULT FALSE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     isAdopted BOOLEAN DEFAULT FALSE,
     idRace INT NOT NULL,
     FOREIGN KEY (idRace) REFERENCES Races(id),
     idSexe INT NOT NULL,
-    FOREIGN KEY (idSexe) REFERENCES Sexe(id),
-    idCompagny INT NOT NULL,
-    FOREIGN KEY (idCompagny) REFERENCES Compagny(id)
+    FOREIGN KEY (idSexe) REFERENCES Sexe(id)
     );
     
 CREATE TABLE Adoption(

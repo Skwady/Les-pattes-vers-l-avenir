@@ -71,7 +71,7 @@ abstract class BaseRepository
      * @param object $criteres An associative array of column names and values to search for.
      * @return object|false Returns an associative object representing the row, or false on failure.
      */
-    public function findBy(array $criteres)
+    public function findAllBy(array $criteres)
     {
         $champs = [];
         $valeurs = [];
