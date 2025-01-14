@@ -12,8 +12,8 @@ require_once ROOT . '/Autoloader.php';
 Autoloader::register();
 
 // Load environment variables from the .env file in the root directory
-$dotenv = Dotenv::createImmutable(ROOT);
-$dotenv->load();
+//$dotenv = Dotenv::createImmutable(ROOT);
+//$dotenv->load();
 
 // Start the application
 $app = new Main();
