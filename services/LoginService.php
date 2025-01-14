@@ -2,7 +2,7 @@
 
 namespace App\services;
 
-use App\Repository\UsersRepository;
+use App\repository\UsersRepository;
 
 class LoginService
 {
