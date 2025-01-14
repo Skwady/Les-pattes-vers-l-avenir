@@ -9,6 +9,10 @@ class RegisterController extends Controller
 {
     public function index()
     {
+        if (isset($_SESSION['user'])) {
+            header('Location: /');
+            exit();
+        }
         $this->render('register/index');
     }
 
