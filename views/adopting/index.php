@@ -1,3 +1,7 @@
+<?php
+$title = "Adoption";
+?>
+
 <form action="/adopting/index/<?= $_SESSION['id'] ?>" method="POST" id="adoption-form" class="container my-5 bg-gray p-5">
   <h2 class="text-center mb-4">Demande d'adoption pour <?=$animal->name ?></h2>
 

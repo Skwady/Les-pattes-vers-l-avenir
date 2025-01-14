@@ -1,4 +1,5 @@
 <?php
+$title = "Inscription";
 $css = 'register';
 ?>
 <section class="mb-5 mt-5">

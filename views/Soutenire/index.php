@@ -1,3 +1,7 @@
+<?php
+$title = "Soutenir notre refuge";
+?>
+
 <div class="container">
     <div class="text-center">
         <img src="/assets/img/logo.svg" alt="logo">

@@ -1,3 +1,7 @@
+<?php
+$title = "Pension";
+?>
+
 <div class="text-center my-5">
     <h1>"Des vacances sur mesure pour chiens et chats"</h1>
 </div>

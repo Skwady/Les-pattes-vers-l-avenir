@@ -1,5 +1,5 @@
 <?php
-$title = "Adoption";
+$title = "Nos amis les chats";
 $css = "adoption";
 $compte = 1;
 if (isset($_SESSION['role']) && $_SESSION['role'] === 'Admin') {  
