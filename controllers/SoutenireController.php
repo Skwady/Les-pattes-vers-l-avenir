@@ -6,6 +6,6 @@ class SoutenireController extends Controller
 {
     public function index()
     {
-        $this->render('soutenire/index');
+        $this->render('Soutenire/index');
     }
 }
