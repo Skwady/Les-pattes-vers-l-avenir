@@ -17,6 +17,9 @@ class LogController extends Controller
      */
     public function index()
     {
+        if (isset($_SESSION['id'])) {
+            header('Location: /');
+        }
         $this->render('login/index');
     }
 

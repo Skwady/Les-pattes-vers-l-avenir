@@ -48,6 +48,17 @@ CREATE TABLE Animals(
     
 CREATE TABLE Adoption(
     id INT PRIMARY KEY AUTO_INCREMENT,
+    fullName VARCHAR(55) NOT NULL,
+    email VARCHAR(255) NOT NULL,
+    phone INT(11) NOT NULL,
+    address VARCHAR(255) NOT NULL,
+    housingType VARCHAR(55) NOT NULL,
+    garden VARCHAR(5) NOT NULL,
+    otherPets VARCHAR(5) DEFAULT FALSE,
+    petsDetails TEXT DEFAULT NULL,
+    adoptingReason TEXT DEFAULT NULL,
+    experience VARCHAR(5) DEFAULT FALSE,
+    availability VARCHAR(55) NOT NULL,
     idAnimal INT NOT NULL,
     idUser INT NOT NULL,
     createdAt TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL,

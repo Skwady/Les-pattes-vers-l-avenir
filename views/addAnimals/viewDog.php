@@ -3,7 +3,7 @@ $title = "Adoption";
 $css = "adoption";
 $compte = 1;
 if (isset($_SESSION['role']) && $_SESSION['role'] === 'Admin') {  
-    echo '<a href="/AddAnimal/AddAnimal">Ajouter un animal</a>';
+    echo '<a class="btn border mt-3 mx-5 bg-gray" href="/AddAnimal/AddAnimal">Ajouter un animal</a>';
 } 
 ?>
 
@@ -73,7 +73,7 @@ foreach ($animals as $animal) :?>
                                     ?>
                                 </div>
                             </div>
-                            <a href="#" class="btn-adopt">Demande d'adoption</a>
+                            <a href="/Adopting/index/<?= $animal->id ?>" class="btn-adopt">Demande d'adoption</a>
                         </div>
                     </div>
                 </div>
@@ -138,7 +138,7 @@ foreach ($animals as $animal) :?>
                                     ?>
                                 </div>
                             </div>
-                            <a href="#" class="btn-adopt2">Demande d'adoption</a>
+                            <a href="/Adopting/index/<?= $animal->id ?>" class="btn-adopt2">Demande d'adoption</a>
                         </div>
                     </div>
                 </div>

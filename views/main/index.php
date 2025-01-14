@@ -56,23 +56,51 @@
     <div class="w-100 fresque2"></div>
 </div>
 
-<div class="bg-gray py-5 carousel">
-    <div id="carouselExampleControlsNoTouching" class="carousel slide" data-bs-touch="false">
-        <div class="carousel-inner container">
-            <div class="carousel-item active d-flex align-items-center text-center justify-content-center gap-5">
-                <img src="/assets/img/caroussel1.svg" class="d-block" alt="photo du commentaire">
-                <div class="bg-white d-flex justify-content-center align-items-center p-5">
-                    <p>description commentaire</p>
+<div id="carouselExample" class="carousel slide bg-gray py-5">
+  <div class="carousel-inner container">
+    <?php foreach($avis as $key => $value): ?>
+        <div class="carousel-item <?= $key === 0 ? 'active' : '' ?>">
+            <div class="d-flex justify-content-center align-items-center flex-wrap">
+                <img src="<?= $value->image ?>" class="d-block w-25" alt="image du commentaire">
+                <div class="w-50 p-5 bg-white text-center">
+                    <p><?= $value->message ?></p>
                 </div>
             </div>
         </div>
-        <button class="carousel-control-prev " type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Previous</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleControlsNoTouching" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Next</span>
-        </button>
-    </div>
+    <?php endforeach; ?>
+  </div>
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+
+    <?php if(isset($_SESSION['id'])): ?>
+        <div class="d-flex justify-content-center mt-5">
+            <button class="btn btn-secondary" id="toggleFormButton">Ajouter un avis</button>
+        </div>
+        <div class="container mt-4">
+            <form action="/main/addAvis/<?= $_SESSION['id'] ?>" method="post" class="d-none" enctype="multipart/form-data" id="formAvis">
+                <div class="mb-3">
+                    <label for="message" class="form-label">Votre avis</label>
+                    <textarea name="message" id="message" class="form-control" rows="5" placeholder="Rédigez votre avis ici..."></textarea>
+                </div>
+                <div class="mb-3">
+                    <label for="image" class="form-label">Votre photo</label>
+                    <input type="file" name="image" id="image" class="form-control" accept="image/*">
+                </div>
+                <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
+                <div class="d-flex justify-content-end">
+                    <button type="submit" class="btn btn-secondary">Envoyer</button>
+                </div>
+                <div id="error-message" class="alert alert-danger" role="alert"></div>
+            </form>
+        </div>
+    <?php endif; ?>
 </div>
+
+<?php
+$scripts = 'formAvis';

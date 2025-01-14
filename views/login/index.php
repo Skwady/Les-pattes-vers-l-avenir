@@ -22,6 +22,9 @@ $css = 'login';
             </div>
         </form>
         <a href="/log/register">Pas encore inscrit ?</a>
-        <div id="error-message" class="alert alert-danger" role="alert"></div>
+        <div class="mt-3">
+            <div id="error-message" class="alert alert-danger" role="alert"></div>
+            <div id="success-message" class="alert alert-success" role="alert"></div>
+        </div>
     </div>    
 </section>

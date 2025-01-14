@@ -2,7 +2,7 @@
     $title = "Ajouter un animal";
 ?>
 
-<div class="container py-5">
+<div class="container bg-gray p-5 my-5 rounded-5">
     <h2 class="text-center">Ajouter un animal</h2>
     <form action="/addAnimal/addAnimal" method="POST" enctype="multipart/form-data">
         <div class="mb-3">
@@ -80,7 +80,7 @@
             <textarea type="text" class="form-control" id="description" name="description" required></textarea>
         </div>
         <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
-        <button type="submit" class="btn border">Ajouter</button>
+        <button type="submit" class="btn border bg-white">Ajouter</button>
     </form>
     <div class="error"></div>
 </div>

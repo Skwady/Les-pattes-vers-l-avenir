@@ -24,7 +24,7 @@
                 <h4><li>Alimentation : croquettes, pâtées, lait maternisé pour les chiots et chatons.</li></h4>
                 <h4><li>Amélioration des infrastructures : entretien des box, espaces de jeux et matériels divers.</li></h4>
             </ul>
-            <h4>? Faire un don via [lien vers la plateforme de don] ou par virement bancaire :<br>IBAN :[votre IBAN]<br>BIC : [votre BIC]</h4>
+            <h4>? Faire un don via [<a href="#">lien vers la plateforme de don</a>] ou par virement bancaire :<br>IBAN :[FR76 0000 0000 0000 0000]<br>BIC : [XXXXXXXX]</h4>
         </div>
     </div>
 </div>

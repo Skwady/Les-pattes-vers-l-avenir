@@ -20,7 +20,7 @@ class BaseMongo extends Mongo
 
         // Configuration des collections
         $this->collections = [
-            'refuge' => 'refuge'
+            'Avis' => 'Avis'
         ];
     }
 

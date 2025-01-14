@@ -69,6 +69,8 @@ class CloudinaryService
                 $cloudinaryService = new CloudinaryService();
                 return $cloudinaryService->uploadFile($image['tmp_name']);
             }
+        }else{
+            echo json_encode(['status' => 'error', 'message' => 'Le message ne peut pas être vide']);
         }
         return null;
     }

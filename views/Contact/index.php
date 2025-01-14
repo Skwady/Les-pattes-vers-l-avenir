@@ -12,20 +12,11 @@ $css = "contact";
     <div class="bg-gray">
         <div class="container py-5 my-5">
             <div>
-                <h4>Formulaire de contact</h4> 
-                <h5>Envoyez-nous un message directement via notre formulaire de contact :</h5>
-                <ul>
-                    <li>Nom</li>
-                    <li>Email</li>
-                    <li>Sujet du message</li>
-                    <li>Message détaillé</li>
-                </ul>
-                <h6>Un membre de notre équipe vous répondra dans les plus brefs délais.</h6>
+                <h4>Un membre de notre équipe vous répondra dans les plus brefs délais.</h4>
             </div>
             <div>
-                <h4>Contact direct :</h4> 
                 <h6><span><img src="/assets/img/emoji/smartphone.svg" alt="smartphone"></span>Téléphone : 07.49.00.00.00</h6>
-                <h6><span><img src="/assets/img/emoji/mail.svg" alt="mail"></span>Email : contact@lespattesverslavenir.fr</h6>
+                <h6><span><img src="/assets/img/emoji/mail.svg" alt="mail"></span>Email : contact@lespattesverslavenir.com</h6>
                 <h6><span><img src="/assets/img/emoji/map-pin.svg" alt="map-pin"></span>Adresse du refuge :</h6>
                 <h6>Les Pattes vers l’Avenir</h6>
                 <h6>123 Rue de la Tendresse</h6>

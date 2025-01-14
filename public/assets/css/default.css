@@ -20,6 +20,10 @@ ul {
     display: none;
 }
 
+#success-message {
+    display: none;
+}
+
 .logo-nav img {
     width: 5vw;
     min-width: 50px;
@@ -27,6 +31,15 @@ ul {
 
 .nav-link{
     font-size: 1.5em;
+}
+
+.nav-link {
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.nav-link:hover {
+    transform: scale(1.2);
+    color: #000000; /* Changer la couleur au survol */
 }
 
 .bg-gray {

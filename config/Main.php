@@ -2,7 +2,6 @@
 
 namespace App\config;
 
-use App\controllers\LoginController;
 use App\controllers\MainController;
 
 class Main
@@ -28,24 +27,18 @@ class Main
 
         if (!empty($uri) && $uri != '/' && $uri[-1] === '/') {
             $uri = substr($uri, 0, -1);
-            echo json_encode(['redirect_url' => $uri]);
+            echo json_encode(['redirect' => $uri]);
             exit();
         }
 
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            header('Content-Type: application/json');
             $csrfToken = $_POST['csrf_token'] ?? '';
             $this->checkCsrfToken($csrfToken);
             $_POST = $this->sanitizeFormData($_POST);
         }
 
         $params = isset($_GET['p']) ? explode('/', filter_var($_GET['p'], FILTER_SANITIZE_URL)) : [];
-
-        if (isset($params[0]) && $params[0] === 'login' && isset($params[1]) && $params[1] === 'confirm' && isset($params[2])) {
-            $token = $params[2];
-            $controller = new LoginController();
-            $controller->confirm($token); 
-            return;
-        }
 
         if (isset($params[0]) && $params[0] != '') {
             $controllerName = '\\App\\controllers\\' . ucfirst(array_shift($params)) . 'Controller';

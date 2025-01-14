@@ -77,19 +77,106 @@
         <?= $contenu ?>
     </main>
 
+    
     <footer class="footer-gaming text-center py-4 border-top border-gray">
+        <!-- Modal -->
+        <div class="modal fade" id="legalModal" tabindex="-1" aria-labelledby="legalModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-lg">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title tb" id="legalModalLabel">Informations légales</h5>
+                        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                    </div>
+                    <div class="modal-body">
+                        <!-- Navigation avec onglets -->
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link active" id="cgu-tab" data-bs-toggle="tab" data-bs-target="#cgu" type="button" role="tab" aria-controls="cgu" aria-selected="true">
+                                    CGU
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="mentions-tab" data-bs-toggle="tab" data-bs-target="#mentions" type="button" role="tab" aria-controls="mentions" aria-selected="false">
+                                    Mentions Légales
+                                </button>
+                            </li>
+                            <li class="nav-item" role="presentation">
+                                <button class="nav-link" id="rgpd-tab" data-bs-toggle="tab" data-bs-target="#rgpd" type="button" role="tab" aria-controls="rgpd" aria-selected="false">
+                                    RGPD
+                                </button>
+                            </li>
+                        </ul>
+    
+                        <!-- Contenu des onglets -->
+                        <div class="tab-content mt-3" id="myTabContent">
+                            <!-- CGU -->
+                            <div class="tab-pane fade show active tb" id="cgu" role="tabpanel" aria-labelledby="cgu-tab">
+                                <h6 class="tb">Conditions Générales d'Utilisation</h6>
+                                <p class="tb">
+                                    Bienvenue sur notre site ! En utilisant ce site, vous acceptez les conditions suivantes :
+                                </p>
+                                <ul>
+                                    <li class="tb">Vous vous engagez à utiliser le site de manière respectueuse, sans tenter de le perturber, de l'endommager ou d'y porter préjudice (tentatives de piratage, diffusion de contenu nuisible, etc.).
+                                        Tout propos injurieux, discriminatoire ou diffamatoire est strictement interdit.</li>
+                                    <li class="tb">La publication de contenus protégés par des droits d'auteur sans autorisation est interdite.
+                                        Les photos ou textes contenant des propos inappropriés, violents ou à caractère pornographique sont strictement prohibés.</li>
+                                    <li class="tb">Chaque utilisateur est responsable du contenu qu’il publie. En cas de non-respect des règles, votre contenu pourra être supprimé sans préavis.
+                                        En cas de violation grave ou répétée, votre compte pourra être supprimé définitivement.</li>
+                                    <li class="tb">Vous êtes invité à commenter de manière constructive et bienveillante.
+                                        Les attaques personnelles, spam ou toute tentative de harcèlement envers le personnelle ne seront pas tolérées.</li>
+                                    <li class="tb">Votre compte est personnel. Le partage de vos identifiants avec des tiers est fortement déconseillé.</li>
+                                    <li class="tb">Toute infraction aux règles énoncées ci-dessus pourra entraîner :
+                                        La suppression du contenu en infraction.
+                                        Une suspension permanente du compte.
+                                        Des actions légales en cas de préjudice grave causé au site ou aux personnelle.</li>
+                                    <li class="tb">Les présentes règles sont susceptibles d’évoluer. Vous serez informé des modifications et invité à les accepter pour continuer à utiliser le site.
+                                        Merci de respecter ces règles et de contribuer à faire de ce site une communauté agréable et atentionner autour des animaux !</li>
+                                </ul>
+                                <p class="tb">Merci de respecter ces règles pour garantir une expérience agréable à tous.</p>
+                            </div>
+    
+                            <!-- Mentions légales -->
+                            <div class="tab-pane fade" id="mentions" role="tabpanel" aria-labelledby="mentions-tab">
+                                <h6 class="tb">Mentions Légales</h6>
+                                <p class="tb">
+                                    <strong>Nom du site :</strong>Les Pattes vers l'Avenir<br>
+                                    <strong>Propriétaire :</strong>Y.V.<br>
+                                    <strong>Adresse :</strong> Adresse du proprio<br>
+                                    <strong>Contact :</strong> contact@pattesverslAvenir.com<br>
+                                    <strong>Hébergeur :</strong> Héroku
+                                </p>
+                            </div> 
+    
+                            <!-- RGPD -->
+                            <div class="tab-pane fade" id="rgpd" role="tabpanel" aria-labelledby="rgpd-tab">
+                                <h6 class="tb">Règlement Général sur la Protection des Données (RGPD)</h6>
+                                <p class="tb">
+                                    Nous respectons votre vie privée. Les données collectées sur ce site (exemple : formulaire de contact) sont utilisées uniquement pour répondre à vos demandes ou améliorer nos services.
+                                </p>
+                                <p class="tb">
+                                    <strong>Données collectées :</strong> Nom, prénom, email.<br>
+                                    <strong>Finalité :</strong> Répondre aux demandes des utilisateurs.<br>
+                                    <strong>Durée de conservation :</strong> 1 an après la dernière interaction.
+                                </p>
+                                <p class="tb">
+                                    Vous pouvez exercer vos droits (accès, rectification, suppression) en nous contactant à l'adresse suivante : contact@pattesverslAvenir.com
+                                </p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+                    </div>
+                </div>
+            </div>
+        </div>
     <div class="container">
         <!-- Texte principal -->
-        <h3>&copy; 2025 Les Pattes vers l'Avenir. Tous droits réservés.</h3>
-
-        <!-- Liens CGU, RGPD, Mentions légales -->
-        <div class="legal-links mt-4">
-            <a href="/cgu" class="legal-link">CGU</a>
-            <span>|</span>
-            <a href="/rgpd" class="legal-link">RGPD</a>
-            <span>|</span>
-            <a href="/mentions-legales" class="legal-link">Mentions légales</a>
+        <div>
+            <h3>&copy; 2025 Les Pattes vers l'Avenir. Tous droits réservés.</h3>
         </div>
+        <!-- Lien pour ouvrir la modal -->
+        <a class="tw" href="#" data-bs-toggle="modal" data-bs-target="#legalModal">Voir les CGU, Mentions légales et RGPD</a>
     </div>
 </footer>
 
