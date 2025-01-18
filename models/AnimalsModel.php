@@ -15,7 +15,7 @@ class AnimalsModel extends Model
     private $children;
     private $cat;
     private $dog;
-    private $createdAt;
+    private $created_at;
     private $race;
     private $isAdopted;
     private $idRace;
@@ -142,66 +142,6 @@ class AnimalsModel extends Model
     }
 
     /**
-     * Get the value of createdAt
-     */
-    public function getCreatedAt() {
-        return $this->createdAt;
-    }
-
-    /**
-     * Set the value of createdAt
-     */
-    public function setCreatedAt($createdAt): self {
-        $this->createdAt = $createdAt;
-        return $this;
-    }
-
-    /**
-     * Get the value of isAdopted
-     */
-    public function getIsAdopted() {
-        return $this->isAdopted;
-    }
-
-    /**
-     * Set the value of isAdopted
-     */
-    public function setIsAdopted($isAdopted): self {
-        $this->isAdopted = $isAdopted;
-        return $this;
-    }
-
-    /**
-     * Get the value of idRace
-     */
-    public function getIdRace() {
-        return $this->idRace;
-    }
-
-    /**
-     * Set the value of idRace
-     */
-    public function setIdRace($idRace): self {
-        $this->idRace = $idRace;
-        return $this;
-    }
-
-    /**
-     * Get the value of idSexe
-     */
-    public function getIdSexe() {
-        return $this->idSexe;
-    }
-
-    /**
-     * Set the value of idSexe
-     */
-    public function setIdSexe($idSexe): self {
-        $this->idSexe = $idSexe;
-        return $this;
-    }
-
-    /**
      * Get the value of children
      */
     public function getChildren() {
@@ -247,6 +187,21 @@ class AnimalsModel extends Model
     }
 
     /**
+     * Get the value of created_at
+     */
+    public function getCreatedAt() {
+        return $this->created_at;
+    }
+
+    /**
+     * Set the value of created_at
+     */
+    public function setCreatedAt($created_at): self {
+        $this->created_at = $created_at;
+        return $this;
+    }
+
+    /**
      * Get the value of race
      */
     public function getRace() {
@@ -258,6 +213,51 @@ class AnimalsModel extends Model
      */
     public function setRace($race): self {
         $this->race = $race;
+        return $this;
+    }
+
+    /**
+     * Get the value of isAdopted
+     */
+    public function getIsAdopted() {
+        return $this->isAdopted;
+    }
+
+    /**
+     * Set the value of isAdopted
+     */
+    public function setIsAdopted($isAdopted): self {
+        $this->isAdopted = $isAdopted;
+        return $this;
+    }
+
+    /**
+     * Get the value of idRace
+     */
+    public function getIdRace() {
+        return $this->idRace;
+    }
+
+    /**
+     * Set the value of idRace
+     */
+    public function setIdRace($idRace): self {
+        $this->idRace = $idRace;
+        return $this;
+    }
+
+    /**
+     * Get the value of idSexe
+     */
+    public function getIdSexe() {
+        return $this->idSexe;
+    }
+
+    /**
+     * Set the value of idSexe
+     */
+    public function setIdSexe($idSexe): self {
+        $this->idSexe = $idSexe;
         return $this;
     }
 }    

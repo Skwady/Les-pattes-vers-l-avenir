@@ -34,7 +34,7 @@ class AddAnimalController extends Controller
             $addAnimal = new AddAnimalService();
             $addAnimal->addAnimal($data);
         }else {
-            json_encode(["status" => "error", "message" => "Method not allowed"]);
+            echo json_encode(["status" => "error", "message" => "Method not allowed"]);
         }
 
         $racesRepository = new RacesRepository();
