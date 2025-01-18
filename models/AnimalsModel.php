@@ -11,11 +11,12 @@ class AnimalsModel extends Model
     private $vaccinated;
     private $neutered;
     private $dewormed;
+    private $description;
     private $children;
     private $cat;
     private $dog;
-    private $description;
     private $createdAt;
+    private $race;
     private $isAdopted;
     private $idRace;
     private $idSexe;
@@ -242,6 +243,21 @@ class AnimalsModel extends Model
      */
     public function setDog($dog): self {
         $this->dog = $dog;
+        return $this;
+    }
+
+    /**
+     * Get the value of race
+     */
+    public function getRace() {
+        return $this->race;
+    }
+
+    /**
+     * Set the value of race
+     */
+    public function setRace($race): self {
+        $this->race = $race;
         return $this;
     }
 }    
