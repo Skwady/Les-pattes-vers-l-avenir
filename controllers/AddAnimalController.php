@@ -30,6 +30,7 @@ class AddAnimalController extends Controller
     public function addAnimal()
     {
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
+            header('Content-Type: application/json');
             $data = $_POST;
             $addAnimal = new AddAnimalService();
             $addAnimal->addAnimal($data);
