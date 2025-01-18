@@ -42,9 +42,9 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="entreesDropdown">
                             <li><a class="dropdown-item" href="/addAnimal/viewDog">Nos amis les chiens</a></li>
-                            <li><a class="dropdown-item" href="/addAnimal/viewCat">Nos amis les chat</a></li>
-                            <li><a class="dropdown-item" href="/addAnimal/viewChiot">Nos amis les chiot</a></li>
-                            <li><a class="dropdown-item" href="/addAnimal/viewChatton">Nos amis les chatton</a></li>
+                            <li><a class="dropdown-item" href="/addAnimal/viewCat">Nos amis les chats</a></li>
+                            <li><a class="dropdown-item" href="/addAnimal/viewChiot">Nos amis les chiots</a></li>
+                            <li><a class="dropdown-item" href="/addAnimal/viewChatton">Nos amis les chattons</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
