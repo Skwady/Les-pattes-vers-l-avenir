@@ -34,7 +34,12 @@ class AddAnimalService
         ];
 
         $AnimalsModel= new AnimalsModel();
-        $AnimalsModel->hydrate($data);
+        $model = $AnimalsModel->hydrate($data);
+
+        if(!$model){
+            echo json_encode(["status" => "error", "message" => "Error lors de la validation des données"]);
+            exit;
+        }
 
         $animalRepository = new AnimalsRepository();
         $result = $animalRepository->create($data);
