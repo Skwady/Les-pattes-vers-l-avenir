@@ -25,7 +25,7 @@ foreach ($animals as $animal) :?>
                                 <h3 class="fw-bold"><?= $animal->name ?></h3>
                                 <img class="sexe" src="/assets/img/femenine.svg" alt="symbole femelle">
                             </div>
-                            <p class="fw-bold">Husky Sibérien<br>
+                            <p class="fw-bold"><?= $animal->race ?><br>
                                 Femelle<br>
                                 <?php if ($animal->age == 1):?>
                                     <?= $animal->age ?> moi<br>
@@ -94,7 +94,7 @@ foreach ($animals as $animal) :?>
                                 <h3 class="fw-bold"><?= $animal->name ?></h3>
                                 <img class="sexe" src="/assets/img/male.svg" alt="symbole male">
                             </div>
-                            <p class="fw-bold">Husky Sibérien<br>
+                            <p class="fw-bold"><?= $animal->race ?><br>
                                 Mâle<br>
                                 <?php if ($animal->age == 1):?>
                                     <?= $animal->age ?> moi<br>
