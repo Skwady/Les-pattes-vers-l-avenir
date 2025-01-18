@@ -14,10 +14,11 @@
 }
 
 .img2 img, .img img {
-    width: 100%; /* Adapte l'image à la largeur du conteneur */
-    max-height: 300px;; /* Conserve les proportions */
-    object-fit: cover; /* Ajuste l'image pour remplir son conteneur sans distorsion */
-    max-width: 320px; /* Limite la taille maximale de l'image */
+    width: 100%; /* Largeur complète */
+    height: 100%; /* Hauteur complète */
+    max-width: 200px;
+    object-fit: cover; /* Remplit le conteneur tout en conservant les proportions */
+    overflow: hidden; /* Cache les parties qui dépassent */
 }
 
 .adoption-card .details {
