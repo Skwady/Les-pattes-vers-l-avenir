@@ -9,7 +9,8 @@ class AddAnimalService
 {
     public function addAnimal($data)
     {
-
+        header('Content-Type: application/json');
+        
         $images = new CloudinaryService();
         $image = $images->validateAndUploadImage($_FILES['image']);
         if(!$image){
