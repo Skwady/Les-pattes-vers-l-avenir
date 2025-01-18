@@ -17,7 +17,7 @@ foreach ($animals as $animal) :?>
             <div class="adoption-card text-center container py-5">
                 <div class="d-flex flex-wrap justify-content-center gap-5">
                     <div class="img">
-                        <img src="<?= $animal->img ?>" alt="photo du chien à adopter">
+                        <img src="<?= $animal->img ?>" alt="photo du chien à adopter" class="img-fluid shadow">
                     </div>
                     <div class="w-75">
                         <div class="details w-100">
@@ -63,7 +63,7 @@ foreach ($animals as $animal) :?>
                                     ?>
                                 </div>
                                 <div class="icon d-flex align-items-end">
-                                    <img src="/assets/img/baby.png" alt="Child icon">
+                                    <img src="/assets/img/baby.png" class="card-img-top" alt="Child icon">
                                     <?php
                                     if ($animal->children == 1) {
                                         echo '<img src="/assets/img/V.svg" alt="icon valider">';

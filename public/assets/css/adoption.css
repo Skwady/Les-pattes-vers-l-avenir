@@ -10,6 +10,14 @@
 
 .img {
     border: 5px solid #BE185D;
+    max-height: 310px;
+}
+
+.img2 img, .img img {
+    width: 100%; /* Adapte l'image à la largeur du conteneur */
+    max-height: 300px;; /* Conserve les proportions */
+    object-fit: cover; /* Ajuste l'image pour remplir son conteneur sans distorsion */
+    max-width: 320px; /* Limite la taille maximale de l'image */
 }
 
 .adoption-card .details {
@@ -58,6 +66,7 @@
 
 .img2 {
     border: 5px solid #172554;
+    max-height: 310px;
 }
 
 .adoption-card .btn-adopt2 {
