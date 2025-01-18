@@ -60,8 +60,6 @@ class CloudinaryService
 
     public function validateAndUploadImage($image): ?string
     {
-        header('Content-Type: application/json');
-        
         if (isset($image) && $image['error'] === UPLOAD_ERR_OK) {
             $allowedTypes = ['image/jpeg', 'image/png', 'image/jpg', 'image/webp'];
 
