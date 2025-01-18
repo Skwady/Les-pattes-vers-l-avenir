@@ -2,7 +2,7 @@
 
 namespace App\services;
 
-use App\Models\AnimalsModel;
+use App\models\AnimalsModel;
 use App\repository\AnimalsRepository;
 
 class AddAnimalService
