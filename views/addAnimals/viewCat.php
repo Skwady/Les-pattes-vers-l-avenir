@@ -26,7 +26,7 @@ foreach ($animals as $animal) :?>
                                 <img class="sexe" src="/assets/img/femenine.svg" alt="symbole femelle">
                             </div>
                             <p class="fw-bold">Husky Sibérien<br>
-                                Mâle<br>
+                                Femelle<br>
                                 <?= $animal->age ?> ans<br>
                                 <?php if ($animal->neutered === 1) {
                                     echo "Stérilisée /";
@@ -91,7 +91,7 @@ foreach ($animals as $animal) :?>
                                 <img class="sexe" src="/assets/img/male.svg" alt="symbole male">
                             </div>
                             <p class="fw-bold">Husky Sibérien<br>
-                                Femelle<br>
+                                Mâle<br>
                                 <?= $animal->age ?> ans<br>
                                 <?php if ($animal->neutered === 1) {
                                     echo "Castré /";
