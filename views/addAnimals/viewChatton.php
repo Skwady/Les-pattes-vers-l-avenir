@@ -1,5 +1,5 @@
 <?php
-$title = "Nos amis les chiens";
+$title = "Nos amis les chats";
 $css = "adoption";
 $compte = 1;
 if (isset($_SESSION['role']) && $_SESSION['role'] === 'Admin') {  
@@ -17,7 +17,7 @@ foreach ($animals as $animal) :?>
             <div class="adoption-card text-center container py-5">
                 <div class="d-flex flex-wrap justify-content-center gap-5">
                     <div class="img">
-                        <img src="<?= $animal->img ?>" alt="photo du chien à adopter" class="img-fluid shadow">
+                        <img src="<?= $animal->img ?>" alt="photo du chien à adopter">
                     </div>
                     <div class="w-75">
                         <div class="details w-100">
@@ -25,12 +25,12 @@ foreach ($animals as $animal) :?>
                                 <h3 class="fw-bold"><?= $animal->name ?></h3>
                                 <img class="sexe" src="/assets/img/femenine.svg" alt="symbole femelle">
                             </div>
-                            <p class="fw-bold"><?= $animal->race ?><br>
+                            <p class="fw-bold">Husky Sibérien<br>
                                 Femelle<br>
                                 <?php if ($animal->age == 1):?>
-                                    <?= $animal->age ?> an<br>
+                                    <?= $animal->age ?> moi<br>
                                     <?php else: ?>
-                                    <?= $animal->age ?> ans<br>
+                                    <?= $animal->age ?> mois<br>
                                 <?php endif; ?>
                                 <?php if ($animal->neutered === 1) {
                                     echo "Stérilisée /";
@@ -67,7 +67,7 @@ foreach ($animals as $animal) :?>
                                     ?>
                                 </div>
                                 <div class="icon d-flex align-items-end">
-                                    <img src="/assets/img/baby.png" class="card-img-top" alt="Child icon">
+                                    <img src="/assets/img/baby.png" alt="Child icon">
                                     <?php
                                     if ($animal->children == 1) {
                                         echo '<img src="/assets/img/V.svg" alt="icon valider">';
@@ -94,9 +94,13 @@ foreach ($animals as $animal) :?>
                                 <h3 class="fw-bold"><?= $animal->name ?></h3>
                                 <img class="sexe" src="/assets/img/male.svg" alt="symbole male">
                             </div>
-                            <p class="fw-bold"><?= $animal->race ?><br>
+                            <p class="fw-bold">Husky Sibérien<br>
                                 Mâle<br>
-                                <?= $animal->age ?> ans<br>
+                                <?php if ($animal->age == 1):?>
+                                    <?= $animal->age ?> moi<br>
+                                    <?php else: ?>
+                                    <?= $animal->age ?> mois<br>
+                                <?php endif; ?>
                                 <?php if ($animal->neutered === 1) {
                                     echo "Castré /";
                                 } ?> <?php if ($animal->dewormed === 1) {

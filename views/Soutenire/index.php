@@ -13,45 +13,50 @@ $title = "Soutenir notre refuge";
         <br><br>
         Que vous soyez un particulier, une entreprise ou une association, plusieurs moyens s’offrent à vous pour nous aider à transformer leur quotidien.</h4>
     </div>
-    <div class="text-center mt-5">
-    <h2>Pourquoi un prix pour l’adoption dans notre refuge ?</h2>
-    <br><br>
-    <h4>Chaque animal recueilli dans notre refuge bénéficie de soins adaptés pour garantir sa santé et son bien-être. Ces soins représentent un coût pour notre structure. 
-    <br><br>    
-        Voici quelques exemples :
-    <br><br>
-    Vaccination et primo-vaccination : Tous les animaux adoptés sont vaccinés ou primo-vaccinés.
-    Vermifugation : Indispensable pour leur santé, tous les animaux sont vermifugés.
-    Soins vétérinaires : Certains animaux nécessitent des interventions plus lourdes, telles que des opérations chirurgicales ou des traitements spécifiques.
-    <br><br>
-    Pour couvrir une partie de ces frais, nous demandons une participation financière lors de l’adoption :
-    <br><br>
-    Chiens adultes : 120 €
-    <br><br>
-    Chiots : 220 € 
-    <br>
-    (avec obligation de stérilisation/castration avant leurs 6 mois, un certificat doit être transmis au refuge).
-    <br><br>
-    Chats adultes : 120 €
-    <br><br>
-    Chatons : 200 € 
-    <br>
-    (avec la même obligation de stérilisation/castration avant leurs 6 mois).
-    <br><br>
-    Informations importantes :
-    <br><br>
-    Identification obligatoire :
-        Tous les animaux doivent être identifiés par puce électronique ou tatouage, peu importe leur âge.
-        Si l’identification n’a pas été réalisée avant l’adoption, il sera nécessaire de la faire chez un vétérinaire agréé.
-        Si l’animal est déjà identifié, le changement de propriétaire doit être déclaré via le Fichier National d'Identification des Carnivores Domestiques (I-CAD). Le certificat d’identification ou de changement de nom devra être transmis au refuge.
-    <br><br>
-    Carnet de santé : Tous les animaux partent avec leur carnet de santé à jour.
-    <br><br>
-    Rappels de vaccins :
-        Pour les chiots et chatons, un rappel est nécessaire après leur primo-vaccination.
-        Pour les adultes, un rappel doit être effectué chaque année.
-    <br><br>
-    En adoptant un animal dans notre refuge, vous contribuez à offrir une seconde chance à un être vivant tout en permettant à notre structure de continuer sa mission. Merci pour votre soutien et votre engagement envers le bien-être animal.</h4>
+</div>
+    <div class="bg-gray">
+        <div class="text-center my-5 container">
+            <h2>Pourquoi un prix pour l’adoption dans notre refuge ?</h2>
+            <br><br>
+            <h4>
+                Chaque animal recueilli dans notre refuge bénéficie de soins adaptés pour garantir sa santé et son bien-être. Ces soins représentent un coût pour notre structure. 
+                <br><br>    
+                Voici quelques exemples :
+                <br><br>
+                Vaccination et primo-vaccination : Tous les animaux adoptés sont vaccinés ou primo-vaccinés.
+                Vermifugation : Indispensable pour leur santé, tous les animaux sont vermifugés.
+                Soins vétérinaires : Certains animaux nécessitent des interventions plus lourdes, telles que des opérations chirurgicales ou des traitements spécifiques.
+                <br><br>
+                Pour couvrir une partie de ces frais, nous demandons une participation financière lors de l’adoption :
+                <br><br>
+                Chiens adultes : 120 €
+                <br><br>
+                Chiots : 220 € 
+                <br>
+                (avec obligation de stérilisation/castration avant leurs 6 mois, un certificat doit être transmis au refuge).
+                <br><br>
+                Chats adultes : 120 €
+                <br><br>
+                Chatons : 200 € 
+                <br>
+                (avec la même obligation de stérilisation/castration avant leurs 6 mois).
+                <br><br>
+                Informations importantes :
+                <br><br>
+                Identification obligatoire :
+                Tous les animaux doivent être identifiés par puce électronique ou tatouage, peu importe leur âge.
+                Si l’identification n’a pas été réalisée avant l’adoption, il sera nécessaire de la faire chez un vétérinaire agréé.
+                Si l’animal est déjà identifié, le changement de propriétaire doit être déclaré via le Fichier National d'Identification des Carnivores Domestiques (I-CAD). Le certificat d’identification ou de changement de nom devra être transmis au refuge.
+                <br><br>
+                Carnet de santé : Tous les animaux partent avec leur carnet de santé à jour.
+                <br><br>
+                Rappels de vaccins :
+                Pour les chiots et chatons, un rappel est nécessaire après leur primo-vaccination.
+                Pour les adultes, un rappel doit être effectué chaque année.
+                <br><br>
+                En adoptant un animal dans notre refuge, vous contribuez à offrir une seconde chance à un être vivant tout en permettant à notre structure de continuer sa mission. Merci pour votre soutien et votre engagement envers le bien-être animal.
+            </h4>
+        </div>
     </div>
 </div>
 <div class="fresque"></div>

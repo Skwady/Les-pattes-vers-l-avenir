@@ -27,7 +27,11 @@ foreach ($animals as $animal) :?>
                             </div>
                             <p class="fw-bold">Husky Sibérien<br>
                                 Femelle<br>
-                                <?= $animal->age ?> ans<br>
+                                <?php if ($animal->age == 1):?>
+                                    <?= $animal->age ?> an<br>
+                                    <?php else: ?>
+                                    <?= $animal->age ?> ans<br>
+                                <?php endif; ?>
                                 <?php if ($animal->neutered === 1) {
                                     echo "Stérilisée /";
                                 } ?> <?php if ($animal->dewormed === 1) {

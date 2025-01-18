@@ -27,6 +27,24 @@ class AddAnimalController extends Controller
         ]);
     }
 
+    public function viewChiot()
+    {
+        $animalsRepository = new AnimalsRepository();
+        $animals = $animalsRepository->findAllBy(['idRace' => 3]);
+        $this->render('addAnimals/viewChiot', [
+            'animals' => $animals
+        ]);
+    }
+
+    public function viewChatton()
+    {
+        $animalsRepository = new AnimalsRepository();
+        $animals = $animalsRepository->findAllBy(['idRace' => 4]);
+        $this->render('addAnimals/viewChatton', [
+            'animals' => $animals
+        ]);
+    }
+
     public function addAnimal()
     {
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
