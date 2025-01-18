@@ -34,6 +34,13 @@ class AddAnimalService
         $AnimalsModel->hydrate($data);
 
         $animalRepository = new AnimalsRepository();
-        $animalRepository->create($data);
+        $result = $animalRepository->create($data);
+        if($result){
+            echo json_encode(["status" => "success", "message" => "Animal added"]);
+            exit;
+        }else{
+            echo json_encode(["status" => "error", "message" => "Error dans l'ajout de l'animal"]);
+            exit;
+        }
     }
 }

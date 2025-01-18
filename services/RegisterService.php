@@ -9,8 +9,6 @@ class RegisterService
 {
     public function register($data)
     {
-        header('Content-Type: application/json');
-
         if (!filter_var($data['email'], FILTER_VALIDATE_EMAIL)) {
             http_response_code(400);
             echo json_encode(["status" => "error", "message" => "Email invalide."]);
@@ -30,10 +28,12 @@ class RegisterService
 
         $data = [
             'name' => $data['name'],
+            'firstname' => $data['firstname'],
             'email' => $data['email'],
             'password' => $password,
+            'isVerified' => 0,
             'token' => $token,
-            'idRole' => $data['idRole'] ?? 2,
+            'idRole' => 2,
         ];
         // Hydrater et enregistrer l'utilisateur avec le token
         $UsersModel = new UsersModel();
@@ -57,7 +57,7 @@ class RegisterService
             // Contenu de l'email
             $to = $email;
             $Subject = 'Confirmation de votre inscription';
-            $confirmationLink = "http://localhost:8080/register/confirm/" . $token;
+            $confirmationLink = "https://lespattesverslavenir-da7b8d143482.herokuapp.com/register/confirm/" . $token;
             $Body = "Bonjour,<br>
                 <br>
                 Merci pour votre inscription.<br>

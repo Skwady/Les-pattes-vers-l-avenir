@@ -32,6 +32,7 @@ $css = 'login';
                 <button type="submit" id="submit" class="btn border w-50">Inscription</button> 
             </div>
         </form>
-        <div class="my-3" id="error-message"></div>
+        <div id="error-message" class="alert alert-danger" role="alert"></div>
+        <div id="success-message" class="alert alert-success" role="alert"></div>
     </div>    
 </section>

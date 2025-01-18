@@ -82,5 +82,6 @@
         <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
         <button type="submit" class="btn border bg-white">Ajouter</button>
     </form>
-    <div class="error"></div>
+    <div id="error-message" class="alert alert-danger" role="alert"></div>
+    <div id="success-message" class="alert alert-success" role="alert"></div>
 </div>
