@@ -13,7 +13,7 @@ foreach ($animals as $animal) :?>
     <div class="<?= $counter % 2 == 0 ? '' : 'bg-gray'; ?>">
     <?php
     if ($animal->isAdopted == 0) : 
-        if ($animal->idSexe == 1) : ?>
+        if ($animal->idSexe == 2) : ?>
             <div class="adoption-card text-center container py-5">
                 <div class="d-flex flex-wrap justify-content-center gap-5">
                     <div class="img">
