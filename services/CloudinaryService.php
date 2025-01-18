@@ -53,10 +53,8 @@ class CloudinaryService
     {
         try {
             $this->cloudinary->uploadApi()->destroy($publicId);
-            return true;
         } catch (\Exception $e) {
             error_log("Cloudinary delete error: " . $e->getMessage());
-            return false;
         }
     }
 
@@ -68,10 +66,13 @@ class CloudinaryService
             if (in_array($image['type'], $allowedTypes)) {
                 $cloudinaryService = new CloudinaryService();
                 return $cloudinaryService->uploadFile($image['tmp_name']);
+            }else{
+                echo json_encode(['status' => 'error', 'message' => 'Type de fichier non autorisé']);
+                return $image;
             }
         }else{
             echo json_encode(['status' => 'error', 'message' => 'Le message ne peut pas être vide']);
+            exit;
         }
-        return null;
     }
 }

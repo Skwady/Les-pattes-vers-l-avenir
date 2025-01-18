@@ -12,6 +12,10 @@ class AddAnimalService
 
         $images = new CloudinaryService();
         $image = $images->validateAndUploadImage($_FILES['image']);
+        if(!$image){
+            echo json_encode(["status" => "error", "message" => "Error lors de l'upload de l'image"]);
+            exit;
+        }
 
         $data = [
             'name' => $data['name'],
@@ -36,10 +40,10 @@ class AddAnimalService
         $animalRepository = new AnimalsRepository();
         $result = $animalRepository->create($data);
         if($result){
-            echo json_encode(["status" => "success", "message" => "Animal added"]);
+            echo json_encode(["status" => "success", "message" => "Animal ajouté avec succès"]);
             exit;
         }else{
-            echo json_encode(["status" => "error", "message" => "Error dans l'ajout de l'animal"]);
+            echo json_encode(["status" => "error", "message" => "Error lors de l'ajout de l'animal"]);
             exit;
         }
     }
