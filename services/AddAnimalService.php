@@ -18,28 +18,23 @@ class AddAnimalService
 
         $data = [
             'name' => $data['name'],
-            'race' => $data['race'],
             'age' => $data['age'],
             'img' => $image,
-            'idRace' => $data['idRace'],
-            'idSexe' => $data['idSexe'],
+            'vaccinated' => isset($data['vaccinated']) ? 1 : 0,
+            'dewormed' => isset($data['dewormed']) ? 1 : 0,
+            'neutered' => isset($data['neutered']) ? 1 : 0,
+            'description' => $data['description'],
             'children' => isset($data['children']) ? 1 : 0,
             'cat' => isset($data['cat']) ? 1 : 0,
             'dog' => isset($data['dog']) ? 1 : 0,
-            'dewormed' => isset($data['dewormed']) ? 1 : 0,
-            'vaccinated' => isset($data['vaccinated']) ? 1 : 0,
-            'neutered' => isset($data['neutered']) ? 1 : 0,
-            'description' => $data['description'],
-            'isAdopted' => 0
+            'race' => $data['race'],
+            'isAdopted' => 0,
+            'idRace' => $data['idRace'],
+            'idSexe' => $data['idSexe']
         ];
 
         $AnimalsModel= new AnimalsModel();
-        $model = $AnimalsModel->hydrate($data);
-
-        if(!$model){
-            echo json_encode(["status" => "error", "message" => "Error lors de la validation des données"]);
-            exit;
-        }
+        $AnimalsModel->hydrate($data);
 
         $animalRepository = new AnimalsRepository();
         $result = $animalRepository->create($data);
