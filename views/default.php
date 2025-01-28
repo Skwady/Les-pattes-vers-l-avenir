@@ -66,7 +66,8 @@
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="entreesDropdown">
                             <li><a class="dropdown-item" href="/admin/viewAdopting">Demande d'adoption en cour</a></li>
-                            <li><a class="dropdown-item" href="/admin/viewUsers">Gestion des utilisateur</a></li>
+                            <li><a class="dropdown-item" href="/admin/viewUsers">Gestion des utilisateurs</a></li>
+                            <li><a class="dropdown-item" href="/admin/index">Gestion des commentaires</a></li>
                         </ul>
                     </li>
                     <?php endif; ?>

@@ -17,20 +17,25 @@ class AddAvisService
             exit();
         }
 
+        // Gestion de l'image
         $images = new CloudinaryService();
         $img = $images->validateAndUploadImage($_FILES['image']);
 
+        // Préparation des données à insérer
         $addAvis = new AddAvisRepository();
         $data = [
             'userId' => $_SESSION['id'],
             'message' => $message,
             'type' => 'text',
-            'image' => $img, // Tableau des URLs des images (vide si aucune image)
+            'image' => $img, // URL de l'image (ou null si aucune image)
             'createdAt' => new \MongoDB\BSON\UTCDateTime(),
+            'validated' => false, // Défini comme non validé par défaut
         ];
 
+        // Insertion dans la base
         $documentId = $addAvis->publishMessage($data);
 
+        // Retour JSON en fonction du succès ou de l'échec
         if ($documentId) {
             echo json_encode(["status" => "success", "redirect" => "/"]);
         } else {

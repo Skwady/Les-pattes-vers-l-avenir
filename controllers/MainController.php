@@ -18,8 +18,8 @@ class MainController extends Controller
     {
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
             $data = $_POST;
-            $addAvis = new AddAvisService();
-            $addAvis->addAvis($data);
+            $addAvisService = new AddAvisService();
+            $addAvisService->addAvis($data);
         }
     }
 }

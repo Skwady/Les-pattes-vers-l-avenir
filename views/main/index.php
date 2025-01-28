@@ -59,6 +59,7 @@
 <div id="carouselExample" class="carousel slide bg-gray py-5">
   <div class="carousel-inner container">
     <?php foreach($avis as $key => $value): ?>
+        <?php if($value->validated === true) : ?>
         <div class="carousel-item <?= $key === 0 ? 'active' : '' ?>">
             <div class="d-flex justify-content-center align-items-center flex-wrap">
                 <img src="<?= $value->image ?>" class="d-block w-25" alt="image du commentaire">
@@ -67,6 +68,7 @@
                 </div>
             </div>
         </div>
+        <?php endif; ?>
     <?php endforeach; ?>
   </div>
   <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
@@ -97,6 +99,7 @@
                     <button type="submit" class="btn btn-secondary">Envoyer</button>
                 </div>
                 <div id="error-message" class="alert alert-danger" role="alert"></div>
+                <div id="success-message" class="alert alert-success" role="alert"></div>
             </form>
         </div>
     <?php endif; ?>
