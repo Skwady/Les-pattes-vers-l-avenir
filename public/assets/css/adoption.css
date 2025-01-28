@@ -13,6 +13,8 @@
     max-height: 310px;
 }
 
+
+
 .img2 img, .img img {
     width: 100%; /* Largeur complète */
     height: 100%; /* Hauteur complète */
@@ -81,6 +83,16 @@
     display: block;
     margin: 20px 0px 20px 50px;
     width: 50%;
+}
+
+.img2 .btn-adopt2 {
+    margin: 20px auto;
+    padding: 10px 0px;
+}
+
+.img .btn-adopt {
+    margin: 20px auto;
+    padding: 10px 0px;
 }
 
 .adoption-card .btn-adopt2:hover {

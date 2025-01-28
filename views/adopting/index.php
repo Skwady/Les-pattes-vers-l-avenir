@@ -2,7 +2,7 @@
 $title = "Adoption";
 ?>
 
-<form action="/adopting/index/<?= $_SESSION['id'] ?>" method="POST" id="adoption-form" class="container my-5 bg-gray p-5">
+<form action="/adopting/index/<?= $animal->id . '/' . $_SESSION['id'] ?>" method="POST" id="adoption-form" class="container my-5 bg-gray p-5">
   <h2 class="text-center mb-4">Demande d'adoption pour <?=$animal->name ?></h2>
 
   <!-- Section des informations personnelles -->
@@ -38,9 +38,9 @@ $title = "Adoption";
       <label for="housingType" class="form-label">Type de logement :</label>
       <select id="housingType" name="housingType" class="form-select" required>
         <option value="" disabled selected>Choisissez...</option>
-        <option value="house">Maison</option>
-        <option value="apartment">Appartement</option>
-        <option value="other">Autre</option>
+        <option value="Maison">Maison</option>
+        <option value="Apartment">Appartement</option>
+        <option value="Autre">Autre</option>
       </select>
     </div>
 

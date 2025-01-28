@@ -7,7 +7,7 @@ use App\services\AdoptingService;
 
 class AdoptingController extends Controller
 {
-    public function index($idAnimal)
+    public function index($idAnimal, $idUser = null)
     {
         if($_SERVER['REQUEST_METHOD'] === 'POST') {
             $data = $_POST;

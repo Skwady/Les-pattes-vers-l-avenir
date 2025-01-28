@@ -41,10 +41,10 @@
                             Adoptez-nous !
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="entreesDropdown">
-                            <li><a class="dropdown-item" href="/addAnimal/viewDog">Nos amis les chiens</a></li>
-                            <li><a class="dropdown-item" href="/addAnimal/viewCat">Nos amis les chats</a></li>
-                            <li><a class="dropdown-item" href="/addAnimal/viewChiot">Nos amis les chiots</a></li>
-                            <li><a class="dropdown-item" href="/addAnimal/viewChatton">Nos amis les chattons</a></li>
+                            <li><a class="dropdown-item" href="/animal/view/1">Nos amis les chiens</a></li>
+                            <li><a class="dropdown-item" href="/animal/view/2">Nos amis les chats</a></li>
+                            <li><a class="dropdown-item" href="/animal/view/3">Nos amis les chiots</a></li>
+                            <li><a class="dropdown-item" href="/animal/view/4">Nos amis les chattons</a></li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -59,6 +59,17 @@
                     <li class="nav-item">
                         <a class="nav-link" href="/contact">Contact</a>
                     </li>
+                    <?php if(isset($_SESSION['role']) && $_SESSION['role'] === 'Admin'): ?>
+                        <li class="nav-item dropdown">
+                        <a class="nav-link" id="entreesDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Admin
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="entreesDropdown">
+                            <li><a class="dropdown-item" href="/admin/viewAdopting">Demande d'adoption en cour</a></li>
+                            <li><a class="dropdown-item" href="/admin/viewUsers">Gestion des utilisateur</a></li>
+                        </ul>
+                    </li>
+                    <?php endif; ?>
                     <!-- Authenticated user links -->
                     <?php if(isset($_SESSION['id'])): ?>
                     <li class="nav-item">

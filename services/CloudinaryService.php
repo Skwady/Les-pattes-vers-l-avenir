@@ -44,35 +44,73 @@ class CloudinaryService
     }
 
     /**
-     * Deletes a file from Cloudinary by its public ID.
+     * Deletes a file from Cloudinary by its URL.
      *
-     * @param string $publicId The public ID of the file to delete.
+     * @param string $url The URL of the file to delete.
      * @return bool Returns true if the file was deleted, false otherwise.
      */
-    public function deleteFile($publicId)
+    public function deleteFile($url)
     {
         try {
-            $this->cloudinary->uploadApi()->destroy($publicId);
+            $publicId = $this->extractPublicIdFromUrl($url);
+            if ($publicId) {
+                $result = $this->cloudinary->uploadApi()->destroy($publicId);
+                return $result['result'] === 'ok';
+            }
+            error_log("Public ID introuvable pour l'URL : $url");
+            return false;
         } catch (\Exception $e) {
             error_log("Cloudinary delete error: " . $e->getMessage());
+            return false;
         }
     }
 
-    public function validateAndUploadImage($image): ?string
+    /**
+     * Extracts the public ID from a Cloudinary URL.
+     *
+     * @param string $url The Cloudinary URL.
+     * @return string|null The extracted public ID, or null if invalid.
+     */
+    public function extractPublicIdFromUrl(string $url): ?string
+    {
+        try {
+            $parsedUrl = parse_url($url);
+            if (!isset($parsedUrl['path'])) {
+                throw new \InvalidArgumentException("URL invalide : aucune information de chemin trouvée.");
+            }
+
+            $path = $parsedUrl['path']; // Extraction du chemin
+            $pathParts = explode('/', $path);
+            $lastPart = end($pathParts); // Dernière partie du chemin
+            $fileParts = pathinfo($lastPart); // Analyse pour séparer extension et nom
+
+            return $fileParts['filename'] ?? null;
+        } catch (\Exception $e) {
+            error_log("Erreur lors de l'extraction du public_id : " . $e->getMessage());
+            return null;
+        }
+    }
+
+    /**
+     * Validates and uploads an image file to Cloudinary.
+     *
+     * @param array $image The uploaded image file ($_FILES array).
+     * @return string|false The secure URL of the uploaded image, or false on failure.
+     */
+    public function validateAndUploadImage(array $image)
     {
         if (isset($image) && $image['error'] === UPLOAD_ERR_OK) {
             $allowedTypes = ['image/jpeg', 'image/png', 'image/jpg', 'image/webp'];
 
             if (in_array($image['type'], $allowedTypes)) {
-                $cloudinaryService = new CloudinaryService();
-                return $cloudinaryService->uploadFile($image['tmp_name']);
-            }else{
+                return $this->uploadFile($image['tmp_name']);
+            } else {
                 echo json_encode(['status' => 'error', 'message' => 'Type de fichier non autorisé']);
-                return $image;
+                return false;
             }
-        }else{
-            echo json_encode(['status' => 'error', 'message' => 'Le message ne peut pas être vide']);
-            exit;
+        } else {
+            echo json_encode(['status' => 'error', 'message' => 'Le fichier ne peut pas être vide ou contient des erreurs']);
+            return false;
         }
     }
 }

@@ -4,18 +4,18 @@
 
 <div class="container bg-gray p-5 my-5 rounded-5">
     <h2 class="text-center">Ajouter un animal</h2>
-    <form action="/addAnimal/addAnimal" method="POST" enctype="multipart/form-data">
+    <form action="/addAnimal/updateAnimal/<?= $animal->id ?>" method="POST" enctype="multipart/form-data">
         <div class="mb-3">
             <label for="name" class="form-label">Nom</label>
-            <input type="text" class="form-control" id="name" name="name" required>
+            <input type="text" class="form-control" id="name" name="name" value="<?= $animal->name ?>" required>
         </div>
         <div class="mb-3">
             <label for="race" class="form-label">race</label>
-            <input type="text" class="form-control" id="race" name="race" required>
+            <input type="text" class="form-control" id="race" name="race" value="<?= $animal->race ?>" required>
         </div>
         <div class="mb-3">
-            <label for="age" class="form-label">Âge (en moi)</label>
-            <input type="number" class="form-control" id="age" name="age" required>
+            <label for="age" class="form-label">Âge</label>
+            <input type="number" class="form-control" id="age" name="age" value="<?= $animal->age ?>" required>
         </div>
         <div class="mb-3">
             <label for="image" class="form-label">Image de l'animal</label>
@@ -77,15 +77,15 @@
         </div>
         <div class="mb-3">
             <label for="description" class="form-label">Histoire/caractère/besoins</label>
-            <textarea type="text" class="form-control" id="description autoResize" name="description" required></textarea>
+            <textarea type="text" class="form-control" id="description autoResize" name="description" required><?= $animal->description ?></textarea>
         </div>
         <input type="hidden" name="csrf_token" value="<?php echo $_SESSION['csrf_token']; ?>">
-        <button type="submit" class="btn border bg-white">Ajouter</button>
+        <button type="submit" class="btn border bg-white">Modifier</button>
     </form>
     <div id="error-message" class="alert alert-danger" role="alert"></div>
     <div id="success-message" class="alert alert-success" role="alert"></div>
 </div>
 
 <?php
-$script = "autoResize";
+    $script = "autoResize";
 ?>

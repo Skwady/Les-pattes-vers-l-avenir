@@ -13,6 +13,17 @@ body {
 
 main {
     overflow: hidden;
+    min-height: 75.6vh;
+}
+
+textarea {
+    width: 100%; /* Largeur à 100% */
+    overflow: hidden; /* Masque la barre de défilement */
+    resize: none; /* Désactive le redimensionnement manuel */
+    box-sizing: border-box; /* Inclut le padding dans la largeur */
+    padding: 8px;
+    font-size: 1rem;
+    line-height: 1.5;
 }
 
 ul {

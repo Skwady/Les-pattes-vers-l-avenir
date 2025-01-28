@@ -20,11 +20,10 @@ class Main
 
         // Générer le token CSRF si absent de la session
         if (empty($_SESSION['csrf_token'])) {
-            $_SESSION['csrf_token'] = bin2hex(random_bytes(32)); // Stocke directement le jeton haché
+            $_SESSION['csrf_token'] = bin2hex(random_bytes(32));
         }
 
         $uri = $_SERVER['REQUEST_URI'];
-
         if (!empty($uri) && $uri != '/' && $uri[-1] === '/') {
             $uri = substr($uri, 0, -1);
             echo json_encode(['redirect' => $uri]);
@@ -39,7 +38,6 @@ class Main
         }
 
         $params = isset($_GET['p']) ? explode('/', filter_var($_GET['p'], FILTER_SANITIZE_URL)) : [];
-
         if (isset($params[0]) && $params[0] != '') {
             $controllerName = '\\App\\controllers\\' . ucfirst(array_shift($params)) . 'Controller';
 
@@ -51,7 +49,6 @@ class Main
             }
 
             $action = (isset($params[0])) ? array_shift($params) : 'index';
-
             if (method_exists($controller, $action)) {
                 call_user_func_array([$controller, $action], $params);
             } else {
