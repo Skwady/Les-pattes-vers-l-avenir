@@ -2,8 +2,8 @@
 
 namespace App\services;
 
-use App\Models\UsersModel;
-use App\Repository\UsersRepository;
+use App\models\UsersModel;
+use App\repository\UsersRepository;
 
 class RegisterService
 {

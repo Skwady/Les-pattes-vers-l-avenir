@@ -2,7 +2,7 @@
 
 namespace App\services;
 
-use App\Models\AdoptionModel;
+use App\models\AdoptionModel;
 use App\repository\AdoptingRepository;
 
 class AdoptingService
